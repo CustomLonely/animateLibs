@@ -1,0 +1,85 @@
+*,
+*::before,
+*::aftre {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.popping-menu {
+  position: relative;
+  width: 10em;
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popping-menu button {
+  position: absolute;
+  display: block;
+  width: 4em;
+  height: 4em;
+  padding: 0 1em;
+  appearance: none;
+  background: #ffb66f;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  transform: translate(0, 0) rotate(360deg);
+  opacity: 0;
+  border-radius: 50%;
+  color: white;
+}
+
+.popping-menu .checkbox {
+  display: none;
+}
+.popping-menu .checkbox:checked ~ button:nth-of-type(1) {
+  opacity: 1;
+  transition-delay: 0.1s;
+  transform: translate(-9em, 0em) rotate(0deg);
+}
+.popping-menu .checkbox:checked ~ button:nth-of-type(2) {
+  opacity: 1;
+  transition-delay: 0.2s;
+  transform: translate(-6.36396em, -6.36396em) rotate(0deg);
+}
+.popping-menu .checkbox:checked ~ button:nth-of-type(3) {
+  opacity: 1;
+  transition-delay: 0.3s;
+  transform: translate(0em, -9em) rotate(0deg);
+}
+.popping-menu .checkbox:checked ~ button:nth-of-type(4) {
+  opacity: 1;
+  transition-delay: 0.4s;
+  transform: translate(6.36396em, -6.36396em) rotate(0deg);
+}
+.popping-menu .checkbox:checked ~ button:nth-of-type(5) {
+  opacity: 1;
+  transition-delay: 0.5s;
+  transform: translate(9em, 0em) rotate(0deg);
+}
+.popping-menu .checkbox:checked ~ button:nth-of-type(6) {
+  opacity: 1;
+  transition-delay: 0.6s;
+  transform: translate(6.36396em, 6.36396em) rotate(0deg);
+}
+
+.popping-menu .label {
+  z-index: 10;
+  border-radius: 50%;
+  background: #4791ff;
+  width: 6em;
+  height: 6em;
+  line-height: 6em;
+  text-align: center;
+  display: block;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
